@@ -1,0 +1,7 @@
+apiVersion: experimental.kpack.pivotal.io/v1alpha1
+kind: Store
+metadata:
+  name: demo-store
+spec:
+  sources:
+    - image: harbor2.lab.home:30003/tbs/tbs-dependencies-paketo-buildpacks_go-ab9cc7b62fcf35e3b3e3bb3c49b3cb6b@sha256:e0db65ed551e127cbd20b0925bcff4e3217eab23f6d7e14df6184d139643cf77

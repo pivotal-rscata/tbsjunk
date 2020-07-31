@@ -1,0 +1,13 @@
+apiVersion: experimental.kpack.pivotal.io/v1alpha1
+kind: CustomBuilder
+metadata:
+  name: demo-custom-builder
+  namespace: tbs-demo
+spec:
+  tag: index.docker.io/tbs-builders/demo-custom-builder
+  serviceAccount: default
+  stack: demo-stack
+  store: demo-store
+  order:
+  - group:
+    - id: paketo-buildpacks/go

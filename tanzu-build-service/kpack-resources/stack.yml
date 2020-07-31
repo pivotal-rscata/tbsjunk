@@ -1,0 +1,12 @@
+apiVersion: experimental.kpack.pivotal.io/v1alpha1
+kind: Stack
+metadata:
+  name: demo-stack
+  annotations:
+    buildservice.pivotal.io/defaultRepository: "index.docker.io/tbs"
+spec:
+  id: "org.cloudfoundry.stacks.cflinuxfs3"
+  buildImage:
+    image: index.docker.io/pivotrscata/tbs-dependencies-build-full-360a1b4deba42cc39585b4f9aa185e19@sha256:45c682a0db48fc17cd41773661b6d5211134efc12c796cca0abbf8412676b51f
+  runImage:
+    image: index.docker.io/pivotrscata/tbs-dependencies-run-full-b06366524d674607eaaa72ee7d372b7a@sha256:817d3a21025ea69104b4d257a8ed296b9a335bc8d181ed4649e77429c982578b

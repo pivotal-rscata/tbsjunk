@@ -1,0 +1,17 @@
+apiVersion: build.pivotal.io/v1alpha1
+kind: Image
+metadata:
+  name: tanzu-golang
+  namespace: tbs-demo
+spec:
+  tag: harbor2.lab.home:30003/library/tanzu-golang
+  serviceAccount: default
+  builder:
+    name: demo-custom-builder
+    kind: CustomBuilder
+    cacheSize: "1.5Gi"
+  source:
+    git:
+      url: https://github.com/techgnosis/tanzu-golang.git
+      revision: demo
+
